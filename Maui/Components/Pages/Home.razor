@@ -1,0 +1,17 @@
+﻿@page "/"
+
+<canvas id="myCanvas" width="400" height="400" style="border: 2px solid #FF0000"></canvas>
+<button @onclick=@createBoard>
+    create
+</button>
+
+Welcome to your new app.
+
+@code {
+    private async void createBoard()
+    {
+        await Task.Delay(200); // Đợi 100ms
+        await JavaScript.InvokeVoidAsync("init");
+    }
+
+}
