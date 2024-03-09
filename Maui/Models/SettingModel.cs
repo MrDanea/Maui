@@ -23,12 +23,12 @@ namespace Set
             clp2 = ColorPlayer2;
         }
     }
-}
+        }
 
 namespace System
-{
+        {
     public partial class Document
-    {
+            {
         public string? no { get => ObjectId; set => ObjectId = (string?)value; }
         public string? name1 { get => GetString(nameof(name1)); set => Push(nameof(name1), value); }
         public string? name2 { get => GetString(nameof(name2)); set => Push(nameof(name2), value); }
@@ -58,5 +58,6 @@ namespace System
                 return _setting;
             }
         }
+
     }
 }
