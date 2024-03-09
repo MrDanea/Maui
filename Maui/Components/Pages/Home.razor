@@ -1,18 +1,24 @@
 ﻿@page "/"
 @{
-    var lst = DB.Settings.SelectAll();
+    
 }
 <canvas id="myCanvas" width="400" height="400" style="border: 2px solid #FF0000"></canvas>
 <button @onclick=@createBoard>
     create
 </button>
-
-
+<button @onclick=@create>
+    test
+</button>
 @code {
     private async void createBoard()
     {
         await Task.Delay(200); // Đợi 100ms
         await JavaScript.InvokeVoidAsync("init");
+    }
+    private void create()
+    {
+        var test = set.setting.createone("ahfgsdg", "adgsdag", "dgsdg", "dgggdg", "hfdfgc", "fgjfg", "cfgj", "cfgj");
+        DB.Settings.Insert(test);
     }
 
 }
