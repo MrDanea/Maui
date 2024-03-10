@@ -27,7 +27,7 @@ namespace set
             return info;
         }
     }
-}
+        }
 
 namespace System
         {
@@ -46,19 +46,18 @@ namespace System
 
     public partial class DB
     {
-        static public BsonData.Collection Settings => Main.GetCollection(nameof(Settings));
+        static public BsonData.Collection? Settings => Main.GetCollection(nameof(Settings)); 
         //static BsonData.Collection? _setting;
-        //public static BsonData.Collection? settings
+        //public static BsonData.Collection? Settings
         //{
         //    get
         //    {
         //        if (_setting == null)
         //        {
-        //            _setting = Main?.GetCollection(nameof(settings));
+        //            _setting = Main?.GetCollection(nameof(Settings));
         //            if (_setting?.Find("1") == null)
         //            {
-        //                var test = set.setting.createone("ahfgsdg", "adgsdag", "dgsdg", "dgggdg", "hfdfgc", "fgjfg", "cfgj", "cfgj");
-        //                _setting?.Insert(test);
+        //                _setting?.Insert(new Set.Setting("1", "ahfgsdg", "adgsdag", "dgsdg", "dgggdg", "hfdfgc", "fgjfg", "cfgj", "cfgj"));
         //            }
         //        }
         //        return _setting;
